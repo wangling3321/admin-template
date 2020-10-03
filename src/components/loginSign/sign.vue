@@ -1,3 +1,7 @@
+<!--登录页面-->
+
+
+
 <template>
   <div class="login-container">
     <div>
@@ -14,11 +18,17 @@
           <el-input v-model="ruleForm.name"></el-input>
         </el-form-item>
         <el-form-item label="密码" prop="pass">
-          <el-input type="password" v-model="ruleForm.pass" autocomplete="off"></el-input>
+          <el-input
+            type="password"
+            v-model="ruleForm.pass"
+            autocomplete="off"
+          ></el-input>
         </el-form-item>
 
         <el-form-item>
-          <el-button type="primary" @click="submitForm('ruleForm')">提交</el-button>
+          <el-button type="primary" @click="submitForm('ruleForm')"
+            >提交</el-button
+          >
           <el-button @click="resetForm('ruleForm')">重置</el-button>
         </el-form-item>
       </el-form>
@@ -73,7 +83,7 @@ export default {
             })
             .then((response) => {
               let type;
-              if (response.data.status === 1000) {
+              if (response.data.status === 0) {
                 type = "success";
                 this.$message({
                   message: response.data.res,

@@ -10,18 +10,18 @@ import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
 Vue.use(ElementUI);
 
-//import env from "../env";
+import env from "../env";
 
 import axios from "axios";
 import VueAxios from "vue-axios";
 Vue.use(VueAxios, axios);
 
-//axios.defaults.baseURL = env.baseURL;
+axios.defaults.baseURL = env.baseURL;
 axios.defaults.baseURL = "/api";
 axios.defaults.timeout = 8000;
 
 //mock开关
-const mock = false;
+const mock = true;
 if (mock) {
   require("../mock/mock");
 }

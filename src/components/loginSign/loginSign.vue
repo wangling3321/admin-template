@@ -1,3 +1,7 @@
+<!--登录注册切换页面-->
+
+
+
 <template>
   <div class="background">
     <div class="loginSign-container">

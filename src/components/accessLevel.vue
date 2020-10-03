@@ -6,10 +6,14 @@
       <el-table-column prop="accesslevel" label="权限"></el-table-column>
       <el-table-column fixed="right" label="操作" align="center">
         <template slot-scope="scope">
-          <el-button @click="agree(scope.$index)" type="text">权限设置</el-button>
-          <el-button @click="refuse(scope.$index)" type="text">冻结账号</el-button>
-        </template>
-      </el-table-column>refuse
+          <el-button @click="agree(scope.$index)" type="text"
+            >权限设置</el-button
+          >
+          <el-button @click="refuse(scope.$index)" type="text"
+            >冻结账号</el-button
+          >
+        </template> </el-table-column
+      >refuse
     </el-table>
   </div>
 </template>
@@ -24,15 +28,14 @@ export default {
   },
   methods: {
     getWaitLoginUser() {
-      let url = "/sign/getUser";
+      let url = "userdata";
       this.axios
         .get(url)
         .then((response) => {
-          response.data.map((v) => {
-            this.tableData.push(v);
-          });
+          this.tableData = response.data.userData;
+
           //console.log(this.tableData);
-          //console.log(response);
+          // console.log(response);
         })
         .catch((error) => {
           console.log(error);

@@ -31,7 +31,7 @@ export default {
         .get(url)
         .then((response) => {
           //console.log(response);
-          response.data.map((v) => {
+          response.data.userData.map((v) => {
             this.tableData.push(v);
           });
           //console.log(this.tableData);
