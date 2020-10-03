@@ -1,3 +1,5 @@
+<!--待注册人员页面-->
+
 <template>
   <div class="waitLoginTable-container">
     <el-table :data="tableData" style="width: 100%">
@@ -8,8 +10,8 @@
         <template slot-scope="scope">
           <el-button @click="agree(scope.$index)" type="text">同意</el-button>
           <el-button @click="refuse(scope.$index)" type="text">移除</el-button>
-        </template>
-      </el-table-column>refuse
+        </template> </el-table-column
+      >refuse
     </el-table>
   </div>
 </template>
