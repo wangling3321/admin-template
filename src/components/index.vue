@@ -51,7 +51,7 @@
               </el-submenu>
               <el-menu-item index="2">
                 <i class="el-icon-edit"></i>
-                <span slot="title">内容1管理</span>
+                <span slot="title">内容管理</span>
               </el-menu-item>
             </el-menu>
           </el-col>
